@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  dive-into-kotlin:
+    container_name: dive-into-kotlin-dev_dkr
+    image: "ijohnnymiller/dive-into-kotlin-dev_dkr:${TAG}"
+    ports:
+      - "8080:8080"
+    networks:
+      dive_into_kotlin_network:
+        ipv4_address: 172.11.239.10
+
+networks:
+  dive_into_kotlin_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.11.239.0/24"
