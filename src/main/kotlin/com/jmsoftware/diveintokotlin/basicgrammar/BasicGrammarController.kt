@@ -21,10 +21,6 @@ import org.springframework.web.bind.annotation.RestController
 class BasicGrammarController(val basicGrammarService: BasicGrammarService) {
     val log = log<BasicGrammarController>()
 
-    /**
-     * Filter countries.
-     * @return List<Country> country list.
-     */
     @GetMapping("/filter-countries")
     @ApiOperation(value = "Filter countries", notes = "Filter countries")
     fun filterCountries(): List<Country> {
