@@ -1,10 +1,12 @@
 package com.jmsoftware.diveintokotlin.basicgrammar
 
-import com.github.javafaker.Faker
+import com.jmsoftware.diveintokotlin.basicgrammar.service.BasicGrammarService
 import com.jmsoftware.diveintokotlin.common.log
+import io.swagger.annotations.Api
+import io.swagger.annotations.ApiOperation
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
-import java.util.*
 
 /**
  * BasicGrammarController
@@ -15,41 +17,17 @@ import java.util.*
  **/
 @RestController
 @RequestMapping("/basic-grammar")
-class BasicGrammarController {
+@Api(value = "/basic-grammar", tags = ["Basic Grammar Controller"])
+class BasicGrammarController(val basicGrammarService: BasicGrammarService) {
     val log = log<BasicGrammarController>()
-    val faker = Faker(Locale("en-US"))
 
     /**
      * Filter countries.
      * @return List<Country> country list.
      */
-    @RequestMapping("/filter-countries")
+    @GetMapping("/filter-countries")
+    @ApiOperation(value = "Filter countries", notes = "Filter countries")
     fun filterCountries(): List<Country> {
-        val countryList = mutableListOf<Country>()
-        fillUpCountryList(countryList)
-        return filterCountryList(countryList)
-    }
-
-    /**
-     * Filter country list, keep the population is more than 3,000.
-     * @param countryList MutableList<Country>
-     * @return List<Country>
-     */
-    private fun filterCountryList(countryList: MutableList<Country>): List<Country> {
-        return countryList.filter { country -> country.population > 3_000 }
-    }
-
-    /**
-     * Fill up list of country with random data.
-     * @param countryList MutableList<[ERROR : Country]> mutable country list.
-     */
-    private fun fillUpCountryList(countryList: MutableList<Country>) {
-        val amount = Random().nextInt(10)
-        log.info("Amount of country list: {}", amount)
-        for (index in 1..amount) {
-            val country = Country(faker.name().firstName(), faker.name().lastName(), amount * Random().nextInt(1000))
-            countryList.add(country)
-        }
-        log.info("Generated country list: {}", countryList)
+        return basicGrammarService.getFilteredCountries()
     }
 }
