@@ -47,4 +47,13 @@ class BasicGrammarServiceImpl : BasicGrammarService {
         fillUpCountryList(countryList)
         return filterCountryList(countryList)
     }
+
+    override fun iterateString(stringNeedsToBeIterated: String): String {
+        val contactingResult: String = """Iterated string:
+                                       |$stringNeedsToBeIterated""".trimMargin()
+        for (charactor in contactingResult) {
+            log.info("charactor in contactingResult: {}", charactor)
+        }
+        return contactingResult
+    }
 }

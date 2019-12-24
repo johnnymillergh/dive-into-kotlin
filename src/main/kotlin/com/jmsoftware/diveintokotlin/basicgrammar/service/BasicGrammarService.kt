@@ -10,5 +10,16 @@ import com.jmsoftware.diveintokotlin.basicgrammar.Country
  * @date 12/4/19 9:36 AM
  **/
 interface BasicGrammarService {
+    /**
+     * Get filtered countries
+     * @return List<Country>
+     */
     fun getFilteredCountries(): List<Country>
+
+    /**
+     * Iterate string
+     * @param stringNeedsToBeIterated String
+     * @return String
+     */
+    fun iterateString(stringNeedsToBeIterated: String): String
 }
