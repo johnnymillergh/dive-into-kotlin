@@ -2,7 +2,8 @@ package com.jmsoftware.diveintokotlin.basicgrammar.service.impl
 
 import com.github.javafaker.Faker
 import com.jmsoftware.diveintokotlin.basicgrammar.BasicGrammarController
-import com.jmsoftware.diveintokotlin.basicgrammar.Country
+import com.jmsoftware.diveintokotlin.basicgrammar.enumeration.Continent
+import com.jmsoftware.diveintokotlin.basicgrammar.pojo.Country
 import com.jmsoftware.diveintokotlin.basicgrammar.service.BasicGrammarService
 import com.jmsoftware.diveintokotlin.common.log
 import org.springframework.stereotype.Service
@@ -55,5 +56,9 @@ class BasicGrammarServiceImpl : BasicGrammarService {
             log.info("charactor in contactingResult: {}", charactor)
         }
         return contactingResult
+    }
+
+    override fun getContinentNameByValue(value: Int): String {
+        return Continent.getNameByValue(value)
     }
 }

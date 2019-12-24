@@ -1,6 +1,6 @@
 package com.jmsoftware.diveintokotlin.basicgrammar.service
 
-import com.jmsoftware.diveintokotlin.basicgrammar.Country
+import com.jmsoftware.diveintokotlin.basicgrammar.pojo.Country
 
 /**
  * BasicGrammarService
@@ -22,4 +22,11 @@ interface BasicGrammarService {
      * @return String
      */
     fun iterateString(stringNeedsToBeIterated: String): String
+
+    /**
+     * Get continent name by value
+     * @param value Int
+     * @return String
+     */
+    fun getContinentNameByValue(value: Int): String
 }

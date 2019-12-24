@@ -1,4 +1,4 @@
-package com.jmsoftware.diveintokotlin.basicgrammar
+package com.jmsoftware.diveintokotlin.basicgrammar.pojo
 
 /**
  * Country
