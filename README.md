@@ -21,7 +21,9 @@ Here is the highlights of **Dive into Kotlin**:
 
    `org.springframework.boot:spring-boot-starter-parent` - [![Spring Boot](https://maven-badges.herokuapp.com/maven-central/org.springframework.boot/spring-boot-starter-parent/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.springframework.boot/spring-boot-starter-parent/)
 
-2. API visualization
+2. Based on latest Kotlin:[![Spring Boot](https://maven-badges.herokuapp.com/maven-central/org.jetbrains.kotlin/kotlin-project/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.jetbrains.kotlin/kotlin-project/)
+
+3. API visualization
 
 
 ## Usage
