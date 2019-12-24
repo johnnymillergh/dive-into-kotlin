@@ -21,7 +21,7 @@ enum class Continent(
      */
     ASIA("Asia", 0) {
         override fun greet(personName: String): String {
-            return """你好来自亚洲！$personName"""
+            return "你好来自亚洲！$personName"
         }
     },
     /**
@@ -29,7 +29,7 @@ enum class Continent(
      */
     AFRICA("Africa", 1) {
         override fun greet(personName: String): String {
-            return """Hallo van Afrika! $personName"""
+            return "Hallo van Afrika! $personName"
         }
     },
     /**
@@ -37,7 +37,7 @@ enum class Continent(
      */
     NORTH_AMERICA("North America", 2) {
         override fun greet(personName: String): String {
-            return """Hello from North America! $personName"""
+            return "Hello from North America! $personName"
         }
     },
     /**
@@ -45,7 +45,7 @@ enum class Continent(
      */
     SOUTH_AMERICA("South America", 3) {
         override fun greet(personName: String): String {
-            return """Hola desde sudamerica! $personName"""
+            return "Hola desde sudamerica! $personName"
         }
     },
     /**
@@ -53,7 +53,7 @@ enum class Continent(
      */
     ANTARCTICA("Antarctica", 4) {
         override fun greet(personName: String): String {
-            return """Hello from Antarctica! $personName"""
+            return "Hello from Antarctica! $personName"
         }
     },
     /**
@@ -61,7 +61,7 @@ enum class Continent(
      */
     EUROPE("Europe", 5) {
         override fun greet(personName: String): String {
-            return """Hello from Europe! $personName"""
+            return "Hello from Europe! $personName"
         }
     },
     /**
@@ -69,7 +69,7 @@ enum class Continent(
      */
     AUSTRALIA("Australia", 6) {
         override fun greet(personName: String): String {
-            return """Hello from Australia! $personName"""
+            return "Hello from Australia! $personName"
         }
     };
 
