@@ -29,4 +29,12 @@ interface BasicGrammarService {
      * @return String
      */
     fun getContinentNameByValue(value: Int): String
+
+    /**
+     * Greet to a person
+     * @param value Int
+     * @param personName String
+     * @return String
+     */
+    fun greet(value: Int, personName: String): String
 }

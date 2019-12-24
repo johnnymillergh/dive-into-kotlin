@@ -39,4 +39,10 @@ class BasicGrammarController(val basicGrammarService: BasicGrammarService) {
     fun getContinentNameByValue(@NotNull @RequestParam continentValue: Int): String {
         return basicGrammarService.getContinentNameByValue(continentValue)
     }
+
+    @GetMapping("/greet")
+    @ApiOperation(value = "Greet", notes = "Greet")
+    fun greet(@NotNull @RequestParam continentValue: Int, @NotBlank @RequestParam personName: String): String {
+        return basicGrammarService.greet(continentValue, personName)
+    }
 }

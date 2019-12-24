@@ -61,4 +61,9 @@ class BasicGrammarServiceImpl : BasicGrammarService {
     override fun getContinentNameByValue(value: Int): String {
         return Continent.getNameByValue(value)
     }
+
+    override fun greet(value: Int, personName: String): String {
+        val continent = Continent.getByValue(value)
+        return continent?.greet(personName)!!
+    }
 }
